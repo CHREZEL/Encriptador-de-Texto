@@ -32,22 +32,21 @@ function ocultar() {
 function encriptartexto(mensaje){
     let textofinal ="";
 
-    for ( i = 0; i < mensaje.length; i++){
+    for ( var i = 0; i < mensaje.length; i++){
         if (mensaje [i] == "a") {
             textofinal = textofinal + "ai"
-            break;
         }
         else if (mensaje [i] == "e") {
             textofinal = textofinal + "enter"
-            break;
         }
         else if (mensaje [i] == "i") {
             textofinal = textofinal + "imes"
-            break;
+        }
+        else if (mensaje [i] == "o") {
+            textofinal = textofinal + "ober"
         }
         else if (mensaje [i] == "u") {
             textofinal = textofinal + "ufat"
-            break;
         }
         else {
             textofinal = textofinal + mensaje[i]
@@ -59,22 +58,26 @@ function encriptartexto(mensaje){
 function desencriptartexto(mensaje){
     let textofinal ="";
     
-    for ( i = 0; i < mensaje.length; i++){
+    for ( var i = 0; i < mensaje.length; i++){
         if (mensaje[i] == "a") {
             textofinal = textofinal + "a"
-            break;
+            i = i + 1;       
         }
         else if (mensaje[i] == "e") {
-            textofinal = textofinal + "e"
-            break;
+            textofinal = textofinal + "e"            
+            i = i + 4;
         }
         else if (mensaje[i] == "i") {
             textofinal = textofinal + "i"
-            break;
+            i = i + 3;
+        }
+        else if (mensaje[i] == "o") {
+            textofinal = textofinal + "o"
+            i = i + 3;
         }
         else if (mensaje[i] == "u") {
             textofinal = textofinal + "u"
-            break;
+            i = i + 3;
         }
         else {
             textofinal = textofinal + mensaje[i]

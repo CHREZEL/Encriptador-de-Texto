@@ -51,6 +51,7 @@ main{
 
 .caja_texto:hover {
     transform: scale(1.05);
+    width: 78%;
 }
 
 .caja_texto:focus{
